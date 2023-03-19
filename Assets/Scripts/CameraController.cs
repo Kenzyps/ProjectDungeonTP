@@ -29,7 +29,7 @@ public class CameraController : MonoBehaviour
                 // com a subtração, posso garantir que a posição x vai sempre ficar um pouco atrás do limite exato
                 delta.x = deltaX - boundX;
             }
-            // mesma coisa so que se a camera estiver para a direita
+            // mesma coisa entretanto so ocorre se a camera estiver para a direita
             else
             {
                 delta.x = deltaX + boundX;
