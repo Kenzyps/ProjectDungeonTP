@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Damage
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - 
   - Collidable
   - Player
-  - 
-  - 
+  - Damage
+  - Enemys
   - 
   - 
   - 
@@ -43,6 +44,9 @@ TagManager:
     locked: 0
   - name: floor
     uniqueID: 3806911117
+    locked: 0
+  - name: Enemys
+    uniqueID: 1878661881
     locked: 0
   - name: player
     uniqueID: 1879024293

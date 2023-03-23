@@ -29,6 +29,7 @@ public class PlayerActor : MonoBehaviour
     private void FixedUpdate()
     {
         Movementation();
+        
     }
     //=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=
     private void Movementation() //metodo de movimentacao
@@ -36,6 +37,7 @@ public class PlayerActor : MonoBehaviour
         float xMove = Input.GetAxisRaw("Horizontal");
         float yMove = Input.GetAxisRaw("Vertical");
         movement = new Vector2(xMove, yMove);
+
 
         //resolucao do problema de velocidade aumentada quando o player se move para uma direção diagonal
         if (movement.magnitude > 1f)
@@ -49,13 +51,15 @@ public class PlayerActor : MonoBehaviour
         // fazendo o player olhar para a direção em que ele está andando e ativando a animação certa de acordo com o seu estado
         if (xMove > 0)
         {
-            transform.localScale = new Vector2(1, 1);
+            //transform.localScale = new Vector2(1, 1);
             isRunningState(true);
+            transform.rotation = Quaternion.Euler(0,180,0);
         }
         else if (xMove < 0)
         {
             transform.localScale = new Vector2(-1, 1);
             isRunningState(true);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         if (yMove != 0)
         {
